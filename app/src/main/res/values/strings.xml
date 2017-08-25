@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Connecting Food</string>
+    <string name="email">E-mail</string>
+    <string name="login_in">Login</string>
+    <string name="forgetPassword">Esqueci minha senha</string>
+    <string name="password">Senha</string>
+    <string name="ade_mais">Real</string>
+    <string name="rde_mais">Prog</string>
+    <string name="rfe_menos">Vol</string>
+    <string name="afe_mais">Itens</string>
+    <string name="general">Geral</string>
+    <string name="indicator">Indicador</string>
+    <string name="time">Tempo</string>
+    <string name="data">D/H.</string>
+    <string name="usuario">Usu.</string>
+    <string name="horario">Horário</string>
+    <string name="local">Loc.</string>
+    <string name="categoria">Categoria</string>
+    <string name="cod">EAN / Cód</string>
+    <string name="descricao">Descrição</string>
+    <string name="qtde">Qtde</string>
+    <string name="periodo">Período</string>
+    <string name="atividade">Atividade</string>
+    <string name="sync">Sync</string>
+    <string name="alterar">Alterar</string>
+    <string name="excluir">Excluir</string>
+    <string name="confirma_excluir">Confirma a exclusão ?</string>
+    <string name="sim">sim</string>
+    <string name="nao">não</string>
+    <string name="digite">Digite a nova quantidade:</string>
+    <string name="confirma_codigo">Digite a senha enviada ao email do doador</string>
+    <string name="msg">Por favor, Permita todos</string>
+    <string name="filtro">Filtro</string>
+    <string name="carregando">carregando...</string>
+    <string name="endereco">End.</string>
+    <string name="instituicao">Instituição</string>
+    <string name="instituicao_abrev">Inst.</string>
+    <string name="distribuicao_produtos">Distribuição por Produtos</string>
+    <string name="distribuicao_instituicao">Distribuição por Instituição</string>
+    <string name="telefone">Tel.</string>
+    <string name="consulta">Consulta</string>
+    <string name="agenda">Agenda</string>
+    <string name="checkin">Check in</string>
+    <string name="distribuicao">Distribuição</string>
+    <string name="home">Home</string>
+    <string name="romaneio">Romaneio</string>
+    <string name="total">Total (Kg)</string>
+    <string name="codRomaneio">Código Roma.</string>
+    <string name="quantidade">Quantidade</string>
+
+    <string-array name="selecione">
+        <item></item>
+    </string-array>
+
+
+</resources>

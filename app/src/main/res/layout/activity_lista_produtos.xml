@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<ScrollView-->
+
+<!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:text="Coleta de Produtos"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="22dp"-->
+        <!--android:textStyle="bold" />-->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="45dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cod"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/editCodigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/white"
+                    android:inputType="number"
+                    android:spinnerMode="dialog" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="45dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoria"
+                    android:textSize="15dp" />
+
+                <!--<EditText-->
+                <!--android:id="@+id/editCategoria"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="24dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:background="@drawable/backgroud_spinner"-->
+                <!--android:focusable="false"-->
+                <!--android:visibility="visible" />-->
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/bg_spinner"
+                    android:spinnerMode="dialog"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="38dp"
+                android:paddingRight="45dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descricao"
+                    android:textSize="15dp"
+
+                    />
+
+                <!--<EditText-->
+                    <!--android:id="@+id/editDescricao"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="24dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:background="@drawable/backgroud_spinner"-->
+                    <!--android:focusable="false"-->
+                    <!--android:spinnerMode="dialog"-->
+                    <!--android:visibility="visible" />-->
+
+                <Spinner
+                    android:id="@+id/spinnerDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="21dp"
+                    android:background="@drawable/bg_spinner"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="40dp"
+                android:paddingRight="45dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantidade"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/editQtde"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".5"
+                    android:hint=""
+                    android:background="@color/white"
+                    android:digits="0123456789,"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7" />
+
+                <!--<TextView-->
+                    <!--android:id="@+id/kg_un"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="Kg"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:visibility="gone"-->
+
+                    <!--/>-->
+
+                <ImageButton
+                    android:id="@+id/btSalvar"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".5"
+                    android:src="@drawable/salvar"
+                    android:background="@drawable/border_shadow_button"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:background="@drawable/border_lista_titulo_romaneio"
+                    android:text="Código"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:background="@drawable/border_lista_titulo_romaneio"
+                    android:text="Descrição"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".12"
+                    android:background="@drawable/border_lista_titulo_romaneio"
+                    android:text="Emb."
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:background="@drawable/border_lista_titulo_romaneio"
+                    android:text="Qtde."
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:background="@drawable/border_lista_titulo_romaneio"-->
+                <!--android:drawableLeft="@drawable/ic_edit"-->
+                <!--android:gravity="center"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/black" />-->
+
+            </TableRow>
+        </TableLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight=".5"
+            android:touchscreenBlocksFocus="false">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btAgenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight=".5"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btFinalizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Concluir" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/carregar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight=".4"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ProgressBar-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:text="@string/carregando" />-->
+
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>
+
+    <!--</ScrollView>-->

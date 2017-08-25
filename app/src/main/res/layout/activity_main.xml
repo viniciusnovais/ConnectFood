@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="checklist.pdasolucoes.com.br.checklist.MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        app:srcCompat="@mipmap/favicon"
+        android:layout_marginTop="20dp"
+        android:id="@+id/imageView" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="210dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:src="@drawable/logo"-->
+        <!--android:textSize="30dp"-->
+        <!--android:fontFamily="sans-serif"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:textAlignment="center"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginRight="10dp"
+        android:background="@color/whiteSame"
+        android:id="@+id/editEmail"
+        android:hint="nome@email.com.br"
+        />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginRight="10dp"
+        android:id="@+id/editSenha"
+        android:background="@color/whiteSame"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/login_in"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:onClick="Login"
+        android:id="@+id/btnLogin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/blue"
+        android:id="@+id/forgetPassword"
+        android:text="@string/forgetPassword"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:text="by PDA Soluções Informática"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:text="www.pdasolucoes.com.br"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linkSite"
+        android:textStyle="bold"
+        android:textSize="10dp"
+        android:textColor="@color/blue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="2dp" />
+
+
+</LinearLayout>
+</ScrollView>
