@@ -1,33 +1,22 @@
 package br.com.pdasolucoes.connectfood;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.InflateException;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.List;
 
 import br.com.pdasolucoes.connectfood.adapter.ListaFilialProdutosAdapter;
-import br.com.pdasolucoes.connectfood.adapter.ListaFilialProdutosAdapterTeste;
 import br.com.pdasolucoes.connectfood.dao.AgendaDao;
 import br.com.pdasolucoes.connectfood.dao.DistribuicaoDao;
 import br.com.pdasolucoes.connectfood.dao.ProdutosDao;
