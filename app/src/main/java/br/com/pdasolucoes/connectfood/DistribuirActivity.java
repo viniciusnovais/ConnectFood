@@ -58,7 +58,7 @@ public class DistribuirActivity extends AppCompatActivity {
         dao = new ProdutosDao(this);
         daoAgenda = new AgendaDao(this);
         final SharedPreferences preferences = getSharedPreferences(MainActivity.PREF, MODE_PRIVATE);
-        lista = dao.listarTodosAuxProduto();
+        lista = dao.listarTodosAuxProduto(preferences.getInt("id", 0));
         List<Programacao> listaFilialProgramacao;
 
         listaFilialProgramacao = daoAgenda.listarRecebedoresNaoEfetuada(preferences.getInt("id", 0));
@@ -94,7 +94,7 @@ public class DistribuirActivity extends AppCompatActivity {
                 Intent i = new Intent(DistribuirActivity.this, ListaFilialProdutoActivity.class);
                 i.putExtra("idFilial", adapterInstituicao.getItem(position).getIdFilial());
                 i.putExtra("nomeInstituicao", adapterInstituicao.getItem(position).getRazaoSocial());
-                i.putExtra("idProgramacao",adapterInstituicao.getItem(position).getId());
+                i.putExtra("idProgramacao", adapterInstituicao.getItem(position).getId());
                 startActivity(i);
                 finish();
             }
@@ -145,7 +145,7 @@ public class DistribuirActivity extends AppCompatActivity {
                             Toast.makeText(DistribuirActivity.this, "position" + position, Toast.LENGTH_SHORT).show();
                             i.putExtra("idFilial", adapterInstituicao.getItem(position).getIdFilial());
                             i.putExtra("nomeInstituicao", adapterInstituicao.getItem(position).getRazaoSocial());
-                            i.putExtra("idProgramacao",adapterInstituicao.getItem(position).getId());
+                            i.putExtra("idProgramacao", adapterInstituicao.getItem(position).getId());
                             startActivity(i);
                             finish();
                         }

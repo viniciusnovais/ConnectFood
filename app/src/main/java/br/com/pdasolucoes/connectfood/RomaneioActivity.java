@@ -329,7 +329,7 @@ public class RomaneioActivity extends AppCompatActivity {
         codigo = (long) (100000 + Math.random() * 999999);
 
         message = codigo + "";
-        String table = "<h3>Lista de alimentos doados para a Associação Prato Cheio:</h3><br>" +
+        String table = "<h3>Lista de alimentos doados por " + getIntent().getExtras().getString("nomeFilial") + ":</h3><br>" +
                 "<TABLE BORDER=1>" +
                 "<tr><td><FONT size =\"4\" face=\"calibri light\"> Código </FONT></td>" +
                 "<td><FONT size =\"4\" face=\"calibri light\"> Descrição </FONT></td>" +

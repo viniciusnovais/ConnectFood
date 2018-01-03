@@ -68,6 +68,7 @@ public class EntregaActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     public static String[] dataHora;
     private TextView tvInstituicao, tvQtdeTotal, tvCodRomaneio;
+    private SharedPreferences preferences;
 
 
     @Override
@@ -78,6 +79,8 @@ public class EntregaActivity extends AppCompatActivity {
 //        TextView tvNomeFilial = (TextView) findViewById(R.id.tvNomeFilial);
 //        tvNomeFilial.setText(getIntent().getExtras().getString("nomeFilial"));
         setContentView(R.layout.activity_entrega);
+
+        preferences = getSharedPreferences(MainActivity.PREF, MODE_PRIVATE);
 
         dao = new DistribuicaoDao(this);
         produtosDao = new ProdutosDao(this);
@@ -264,7 +267,7 @@ public class EntregaActivity extends AppCompatActivity {
                         for (Distribuicao d : dao.listarDistribuicaoFilial(getIntent().getExtras().getInt("idEntrega"), getIntent().getExtras().getInt("idProgramacao"))) {
                             dao.alterarStatusAssinado(d);
 
-                            for (Produtos p : produtosDao.listarTodosAuxProduto()) {
+                            for (Produtos p : produtosDao.listarTodosAuxProduto(preferences.getInt("id", 0))) {
                                 Produtos produtos = new Produtos();
                                 if (d.getCodProduto() == p.getCod()) {
                                     produtos.setId(p.getId());
@@ -391,7 +394,7 @@ public class EntregaActivity extends AppCompatActivity {
         codigo = (long) (100000 + Math.random() * 999999);
 
         message = codigo + "";
-        String table = "<h3>Lista de alimentos recebidos através da Associação Prato Cheio por esta instituição:</h3><br>" +
+        String table = "<h3>Lista de alimentos recebidos na(o) " + getIntent().getExtras().getString("nomeFilial") + ":</h3><br>" +
                 "<TABLE BORDER=1>" +
                 "<tr><td><FONT size =\"4\" face=\"calibri light\"> Código </FONT></td>" +
                 "<td><FONT size =\"4\" face=\"calibri light\">" + "Descrição" + "</FONT></td>" +

@@ -328,12 +328,13 @@ public class ProdutosDao {
         return lista;
     }
 
-    public List<Produtos> listarTodosAuxProduto() {
+    public List<Produtos> listarTodosAuxProduto(int idMotorista) {
 
         List<Produtos> lista = new ArrayList<>();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         String data = sdf.format(new Date());
-        Cursor cursor = getDataBase().rawQuery("SELECT cod,_id, nome,qtde,qtdeAbsoluta,categoria,distribuido,unidMedida FROM produtosDoadosAux, programacao p WHERE p.dataSaida = ? and qtdeAbsoluta > 0 GROUP BY cod", new String[]{data + ""});
+        Cursor cursor = getDataBase().rawQuery("SELECT cod,_id, nome,qtde,qtdeAbsoluta,categoria,distribuido,unidMedida FROM produtosDoadosAux, programacao p" +
+                " WHERE p.dataSaida = ? and p.id = idProgramacao and p.idMotorista = ? and qtdeAbsoluta > 0 GROUP BY cod", new String[]{data + "", idMotorista + ""});
 
         try {
 
@@ -382,11 +383,12 @@ public class ProdutosDao {
         return lista;
     }
 
-    public int ContadorProdutosDistribuir() {
+    public int ContadorProdutosDistribuir(int idMotorista) {
         int total = 0;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
         String data = sdf.format(new Date());
-        Cursor cursor = getDataBase().rawQuery("SELECT COUNT(cod) as conta FROM (SELECT cod FROM produtosDoadosAux pr, programacao p WHERE dataSaida = ? and qtdeAbsoluta > 0 GROUP BY cod) x", new String[]{data + ""});
+        Cursor cursor = getDataBase().rawQuery("SELECT COUNT(cod) as conta FROM (SELECT cod FROM produtosDoadosAux pr, programacao p" +
+                " WHERE dataSaida = ? and p.id = pr.idProgramacao and p.idMotorista  = ? and qtdeAbsoluta > 0 GROUP BY cod) x", new String[]{data + "", idMotorista + ""});
 
         try {
 

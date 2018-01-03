@@ -180,9 +180,9 @@ public class HomeActivity extends AppCompatActivity {
                 tvContadorSync.setText(agendaDao.listarProgSync(sharedpreferences.getInt("id", 0)).size() + "");
             }
             tvContadorDistribuir = (TextView) findViewById(R.id.tvContadorDistribuir);
-            if (produtosDao.ContadorProdutosDistribuir() > 0) {
+            if (produtosDao.ContadorProdutosDistribuir(sharedpreferences.getInt("id", 0)) > 0) {
                 tvContadorDistribuir.setVisibility(View.VISIBLE);
-                tvContadorDistribuir.setText(produtosDao.ContadorProdutosDistribuir() + "");
+                tvContadorDistribuir.setText(produtosDao.ContadorProdutosDistribuir(sharedpreferences.getInt("id", 0)) + "");
             }
         } catch (RuntimeException e) {
             e.printStackTrace();
